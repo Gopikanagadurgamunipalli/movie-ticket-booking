@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Ticket Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#booking">Book a Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="movies">
+        <h2>Choose a Movie</h2>
+        <ul class="movie-list">
+            <li>
+                <div class="movie">
+                    <h3>Movie Title 1</h3>
+                    <p>Director: Director Name</p>
+                    <p>Duration: 120 minutes</p>
+                    <button class="book-button" data-movie="1">Book Now</button>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <h3>Movie Title 2</h3>
+                    <p>Director: Director Name</p>
+                    <p>Duration: 110 minutes</p>
+                    <button class="book-button" data-movie="2">Book Now</button>
+                </div>
+            </li>
+            <li>
+              <div class="movie">
+                  <h3>Movie Title 3</h3>
+                  <p>Director: Director Name</p>
+                  <p>Duration: 110 minutes</p>
+                  <button class="book-button" data-movie="3">Book Now</button>
+              </div>
+          </li>
+          <li>
+            <div class="movie">
+                <h3>Movie Title 4</h3>
+                <p>Director: Director Name</p>
+                <p>Duration: 110 minutes</p>
+                <button class="book-button" data-movie="4">Book Now</button>
+            </div>
+        </li>
+        <li>
+          <div class="movie">
+              <h3>Movie Title 5</h3>
+              <p>Director: Director Name</p>
+              <p>Duration: 110 minutes</p>
+              <button class="book-button" data-movie="5">Book Now</button>
+          </div>
+      </li>
+        </ul>
+    </section>
+
+    <section id="booking" style="display: flex;">
+        <h2>Book a Ticket</h2>
+        <form id="booking-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="movie">Movie:</label>
+            <select id="movie" name="movie" required>
+                <option value="1">HANUMAN</option>
+                <option value="2">Adipurush</option>
+                <option value="2">Pushpa</option>
+                <option value="2">RRR</option>
+                <option value="2">Movie Title 5</option>
+            </select><br><br>
+            
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" min="1" max="10" required><br><br>
+            
+            <button type="submit">Confirm Booking</button>
+          </form>
+    </section>
+
+    <section id="confirmation" style="display: none;">
+        <h2>Booking Confirmation</h2>
+        <p>Your booking has been confirmed.</p>
+        <p>Movie: <span id="confirm-movie"></span></p>
+        <p>Seats: <span id="confirm-seats"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Movie Ticket Booking. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>
